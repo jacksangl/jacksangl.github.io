@@ -2,14 +2,16 @@
 
 <html lang="en">
 
-<script>
-    fetch('head.html')
-        .then(response => response.text())
-        .then(header => document.head.innerHTML = header);
+<head>
+    <script>
+        fetch('head.html')
+            .then(response => response.text())
+            .then(header => document.head.innerHTML = header);
     </script>
+</head>
 
 <body>
-    <header class="header-nav-bar" onscroll = keepTop();>
+    <header class="header-nav-bar" onscroll=keepTop();>
         <ul class="navdirect_ul">
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -21,11 +23,11 @@
     <div class="body">
         <div class="name">Resume</div>
         <div></div>
-        <div class = "container" style = "color: #4083af; ">
-            <a href="mailto:sangljack06@gmail.com" class = "fa fa-google fa-lg"> sangljack06@gmail.com</a>
-            <a href="mailto:jms11428@psu.edu" class = "fa fa-envelope fa-lg"> jms11428@psu.edu</a>
+        <div class="container" style="color: #4083af; ">
+            <a href="mailto:sangljack06@gmail.com" class="fa fa-google fa-lg"> sangljack06@gmail.com</a>
+            <a href="mailto:jms11428@psu.edu" class="fa fa-envelope fa-lg"> jms11428@psu.edu</a>
             <hr>
-            <a id = "resume" href = "images/Resume.pdf" download style="text-align: center;"><b >Download Here</b> </a>
+            <a id="resume" href="images/Resume.pdf" download style="text-align: center;"><b>Download Here</b> </a>
             <img src="images/ilovepdf_pages-to-jpg 2/Resume_page-0001.jpg" alt="Resume Page 1" width="100%">
             <img src="images/ilovepdf_pages-to-jpg 2/Resume_page-0002.jpg" alt="Resume Page 2" width="100%">
         </div>

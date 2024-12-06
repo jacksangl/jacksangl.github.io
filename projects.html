@@ -2,11 +2,13 @@
 
 <html lang="en">
 
-<script>
-    fetch('head.html')
-        .then(response => response.text())
-        .then(header => document.head.innerHTML = header);
+<head>
+    <script>
+        fetch('head.html')
+            .then(response => response.text())
+            .then(header => document.head.innerHTML = header);
     </script>
+</head>
 
 <body>
     <header class="header-nav-bar">
@@ -20,13 +22,13 @@
     </header>
     <div class="body">
         <div class="name">Projects</div>
-            <a href="https://github.com/jacksangl/" class="fa fa-github fa-lg"> github.com/jacksangl</a>
-            <hr>
-            <div>I will release projects as they come out but check my github for work-in-progress.</div>
-        <div class = "container" style = "color: #4083af; ">
+        <a href="https://github.com/jacksangl/" class="fa fa-github fa-lg"> github.com/jacksangl</a>
+        <hr>
+        <div>I will release projects as they come out but check my github for work-in-progress.</div>
+        <div class="container" style="color: #4083af; ">
         </div>
     </div>
-        
+
     </div>
 </body>
 

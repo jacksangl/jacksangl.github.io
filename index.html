@@ -2,11 +2,13 @@
 
 <html lang="en">
 
-<script>
-fetch('head.html')
-    .then(response => response.text())
-    .then(header => document.head.innerHTML = header);
-</script>
+<head>
+    <script>
+        fetch('head.html')
+            .then(response => response.text())
+            .then(header => document.head.innerHTML = header);
+    </script>
+</head>
 
 <body>
     <header class="header-nav-bar">
@@ -20,14 +22,14 @@ fetch('head.html')
     </header>
     <div class="body">
         <div class="name"><b>Jack Sangl</b></div>
-        <div style= "display: inline-block;">Software Developer & Computer Engineering Student</div>
+        <div style="display: inline-block;">Software Developer & Computer Engineering Student</div>
         <div style="text-align: right; display: inline-block;">
             <a href="https://www.facebook.com/profile.php?id=100090177665301" class="fa fa-facebook fa-lg"></a>
             <a href="https://www.instagram.com/jacksangl/" class="fa fa-instagram fa-lg"></a>
             <a href="https://github.com/jacksangl/" class="fa fa-github fa-lg"> </a>
             <a href="https://www.linkedin.com/in/jacksangl/" class="fa fa-linkedin fa-lg"></a>
-            <a href="mailto:sangljack06@gmail.com" class = "fa fa-google fa-lg"> </a>
-            <a href="mailto:jms11428@psu.edu" class = "fa fa-envelope fa-lg"></a>
+            <a href="mailto:sangljack06@gmail.com" class="fa fa-google fa-lg"> </a>
+            <a href="mailto:jms11428@psu.edu" class="fa fa-envelope fa-lg"></a>
         </div>
         <hr>
         <img src="images/IMG_6276.jpg" alt="Family Photo">
