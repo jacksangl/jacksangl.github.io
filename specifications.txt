@@ -21,3 +21,4 @@ bootstrap
 used bootstrap for the container class
 
 js 
+used js to make sure the whole website is loaded before activitly showing the html and css to prevent out of syncness
