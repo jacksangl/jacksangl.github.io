@@ -107,6 +107,10 @@ header{
 body {
     background-color: #edf2f4;
 }
+/*for loading purposes*/
+.hidden {
+    display: none;
+}
 
 .fa { 
     font-size: 30px;
