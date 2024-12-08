@@ -14,7 +14,6 @@ header{
 }
 /* all three format the unordered list and its hyperlinks*/
 .navdirect_ul{
-    margin-right: 15px;
     justify-content: flex-end;
     list-style-type: none;
     display: flex;
@@ -29,6 +28,7 @@ header{
     background-color: transparent;
     text-decoration: none;
     margin-right: 25px;
+    text-align: justify;
     
 }
 .navdirect_ul a {
