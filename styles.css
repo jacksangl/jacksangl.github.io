@@ -6,7 +6,7 @@ header{
     font-family: "Merriweather", sans-Serif;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-.header-nav-bar 
+#header-nav
 {
     position: sticky;
     top: 0px;
