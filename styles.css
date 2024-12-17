@@ -1,17 +1,26 @@
+html 
+{
+    min-height: 1200px;
+}
+
 /* sets headerbar color and formats it*/
 header{
     background-color: #edf2f4;
-    font-size: 24px;
     color: #253237;
     font-family: "Merriweather", sans-Serif;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0em 0.25em 0.375em rgba(0, 0, 0, 0.1);
 }
 #header-nav
 {
-    position: sticky;
-    top: 0px;
+    top: 0em;
+    font-size: 1.5em;
     z-index: 1;
     text-align: right;
+    position: fixed;
+}
+.container-fluid 
+{
+    max-height: 5em;
 }
 /* all three format the unordered list and its hyperlinks*/
 .navdirect_ul{
@@ -28,7 +37,7 @@ header{
     color: #2b2d42;
     background-color: transparent;
     text-decoration: none;
-    margin-right: 25px;
+    margin-right: 1.5625em;
     
 }
 .navdirect_ul a {
@@ -36,22 +45,6 @@ header{
     text-decoration: none;
 }
 
-#icondirect{
-    margin-right: 15px;
-    justify-content: flex-end;
-    list-style-type: none;
-    display: flex;
-}
-#icrondirect li {
-    color: #253237;
-    background-color: transparent;
-    text-decoration: none;
-    margin-right: 15px;
-}
-#icondirect a {
-    color: #253237;
-    text-decoration: none;
-}
 .fa:hover {
     opacity: 0.6;
     color: #ef233c;
@@ -61,45 +54,50 @@ header{
 .body {
 
     margin: auto;
-    width: 700px;
-    padding: 10px;
+    margin-top: 3em;
+    width: 43.75em;
+    padding: 0.625em;
+}
+.text {
+    font-size: 1.5em;
 }
   .contact {
     background-color: #C2DFE3;
     margin: auto;
     width: 50%;
-    border: 3px solid rgb(4, 9, 4);
+    border: 0.1875em solid rgb(4, 9, 4);
     position: absolute;
-    margin-bottom: 20px;
-    padding: 15px;
+    margin-bottom: 1.25em;
+    padding: 1em;
 
   }  
-
-
+.headbody {
+    font-size: 1.5em;
+}
 .body img{
     margin: auto;
-    width: 100%;
-    padding: 10px;
+    max-width: 100%;
+    padding: 0.625em;
     
 }
 .body a{
     color: #2b2d42;
     text-decoration: none;
-    line-height: 30px;
+    line-height: 1.875em;
 }
 
 /* formats containers*/
 .container {
     display: flex;
     flex-direction: column;
-    line-height: 30px;
-    margin-bottom: 20px;
-    padding: 15px;
+    line-height: 1.875em;
+    margin-bottom: 1.25em;
+    padding: 1em;
 }
 
 /*formats header names like Jack Sangl or About Me*/
 .name {
-    font-size: calc(40px + 2vw); /*ai suggestion to calculate width based on screen*/
+    font-size: calc(45px + 1.5vw); /*ai suggestion to calculate width based on screen*/
     color: #ef233c;
     font-family: "Merriweather", sans-Serif;
 }
@@ -113,20 +111,18 @@ body {
 }
 
 .fa { 
-    font-size: 30px;
     text-decoration: none;
     border-radius: 50%;
-    margin: 5px 2px;
+    margin: .03125em 0.125em;
   }
-.body iframe {
-    background-color: #C2DFE3;
-    margin: auto;
-    width: 95%;
-    padding: 10px;
-    position: absolute; 
-    size: 8.5in 11in;
-}
-@page {
-    size: 8.5in 11in; 
-    margin: 1in; 
-}
+
+
+
+@media only screen and (max-width: 768px) {
+    #header-nav {
+      width: 100%;
+      overflow: hidden;
+      /* Adjust padding or margin here if necessary */
+    }
+  }
+  
