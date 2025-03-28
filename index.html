@@ -6,29 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jack Sangl - Portfolio</title>
   <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p0kI+Ll1SJbHj6ptlfU7f9uN1j49vFXJvG+qeXo/1jV72O1hk6N7kDg1LR5t8xAJBYf/47zMQ+Vgrb+8S0dZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css", crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Head Template-->
+  <script src="utils.js"></script>
 </head>
 
 <body class="text-white">
   <!-- Header -->
-  <header class="bg-zinc-900 py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <a href="index.html" class="text-xl font-bold">Jack Sangl</a>
-      <nav>
-        <ul class="flex space-x-6">
-          <li><a href="index.html" class="text-xl font-bold">Home</a></li>
-          <li><a href="about.html" class="text-xl font-bold">About</a></li>
-          <li><a href="projects.html" class="text-xl font-bold">Projects</a></li>
-          <li><a href="resume.html" class="text-xl font-bold">Resume</a></li>
-          <li><a href="contact.html" class="text-xl font-bold">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<div id="header-placeholder"></div>
 
   <!-- Main Content -->
   <main class="container mx-auto px-4 py-8">
@@ -36,17 +27,19 @@
       <div class="text-center mb-6">
         <h1 class="text-4xl font-extrabold">Jack Sangl</h1>
         <p class="mt-2 text-zinc-400">Check out some of my work</p>
+        </div>
         <!-- Social Links -->
-        <div class="flex justify-center space-x-4 mt-4">
-            <a href="https://www.facebook.com/profile.php?id=100090177665301" class="text-2xl hover:text-gray-300"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/jacksangl/" class="text-2xl hover:text-gray-300"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://github.com/jacksangl/" class="text-2xl hover:text-gray-300"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/jacksangl/" class="text-2xl hover:text-gray-300"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:sangljack06@gmail.com" class="text-2xl hover:text-gray-300"><i class="fa-solid fa-envelope"></i></a>
-      </div>
-      <hr class="border-gray-700 mb-6">
+        <div class="flex justify-center space-x-6 my-4">
+            <!-- Added aria-label and larger size for better visibility -->
+            <a href="https://www.facebook.com/profile.php?id=100090177665301" class="text-3xl hover:text-blue-500 transition-colors" aria-label="Facebook"><i class="fab fa-facebook"></i> </a>
+            <a href="https://www.instagram.com/jacksangl/" class="text-3xl hover:text-pink-500 transition-colors" aria-label="Instagram"><i class="fab fa-instagram"></i> </a>
+            <a href="https://github.com/jacksangl/" class="text-3xl hover:text-gray-300 transition-colors" aria-label="GitHub"><i class="fab fa-github"></i> </a>
+            <a href="https://www.linkedin.com/in/jacksangl/" class="text-3xl hover:text-blue-600 transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> </a>
+            <a href="mailto:sangljack06@gmail.com" class="text-3xl hover:text-red-400 transition-colors" aria-label="Email"><i class="fas fa-envelope"></i> </a>
+        </div>
       <!-- Responsive Image with controlled size -->
       <div class="max-w-3xl mx-auto">
+        <img src="images/IMG_6276.jpg" alt="Profile Picture" class="w-20 h-20 rounded-full">
       </div>
     </section>
   </main>
