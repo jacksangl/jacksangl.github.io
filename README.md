@@ -1,2 +1,2 @@
-# jacksangl.github.io
-My first static HTML website. Contains about me, contact info, my resume, and projects.
+## jacksangl.github.io
+# This is a hub for Jack Sangl's projects and blog. 
