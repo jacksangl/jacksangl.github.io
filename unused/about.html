@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-zinc-950">
+
+<head id="head">
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio website showcasing projects using a Swiper.js carousel styled with Tailwind CSS.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css", crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+  
+    <!-- Head Template-->
+    <script src="utils.js"></script>
+    <style>
+      .fullscreen-menu a {
+        transform: translateY(-100vh);
+      }
+      .fullscreen-menu:not(.opacity-0) a {
+        transform: translateY(0);
+        transition: transform 0.5s ease-out;
+      }
+      .fullscreen-menu:not(.opacity-0) a:nth-child(5) {
+        transition-delay: 0.0s;
+      }
+      .fullscreen-menu:not(.opacity-0) a:nth-child(4) {
+        transition-delay: 0.2s;
+      }
+      .fullscreen-menu:not(.opacity-0) a:nth-child(3) {
+        transition-delay: 0.4s;
+      }
+      .fullscreen-menu:not(.opacity-0) a:nth-child(2) {
+        transition-delay: 0.6s;
+      }
+      .fullscreen-menu:not(.opacity-0) a:nth-child(1) {
+        transition-delay: 0.8s;
+      }
+    </style>
+</head>
+
+<header class ="header-placeholder">
+    <nav class="relative">
+      <button class="absolute top-4 right-4 z-50 text-white">
+        <svg class="menu-icon w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+        <svg class="close-icon w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div class="fullscreen-menu fixed inset-0 bg-black flex flex-col items-center justify-center gap-4 opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+        <a href="index.html" class="text-white text-3xl px-6 py-3 rounded-full hover:bg-white hover:text-black">Me</a>
+        <a href="projects.html" class="text-white text-3xl px-6 py-3 rounded-full hover:bg-white hover:text-black">Projects</a>
+        <a href="blog.html" class="text-white text-3xl px-6 py-3 rounded-full hover:bg-white hover:text-black">Blog</a>
+        <a href="https://github.com/jacksangl/" class="text-white text-3xl px-6 py-3 rounded-full hover:bg-white hover:text-black">GitHub</a>
+        <a href="contact.html" class="text-white text-3xl px-6 py-3 rounded-full hover:bg-white hover:text-black">Contact</a>
+      </div>
+    </nav>
+    <script>
+      const button = document.querySelector('nav button');
+      const menuIcon = document.querySelector('.menu-icon');
+      const closeIcon = document.querySelector('.close-icon');
+      const fullscreenMenu = document.querySelector('.fullscreen-menu');
+      button.addEventListener('click', () => {
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        fullscreenMenu.classList.toggle('opacity-0');
+        fullscreenMenu.classList.toggle('pointer-events-none');
+      });
+    </script>
+    </header>
+
+    
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-75 h-75 rounded-full overflow-hidden mx-auto mb-4">
+              <img src="images/IMG_5438.png" alt="Jack Sangl" class="object-cover w-full h-full object-[center_10%]">
+            </div>
+        </div>
+        <section class="mb-12">
+          <div class="text-center mb-6">
+            <h1 class="text-4xl font-extrabold">Jack Sangl</h1>
+            <p class="mt-2 text-zinc-400">Check out some of my work</p>
+            </div>
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6 my-4">
+                <!-- Added aria-label and larger size for better visibility -->
+                <a href="https://www.facebook.com/profile.php?id=100090177665301" class="text-3xl hover:text-blue-500 transition-colors" aria-label="Facebook"><i class="fab fa-facebook"></i> </a>
+                <a href="https://www.instagram.com/jacksangl/" class="text-3xl hover:text-pink-500 transition-colors" aria-label="Instagram"><i class="fab fa-instagram"></i> </a>
+                <a href="https://github.com/jacksangl/" class="text-3xl hover:text-gray-300 transition-colors" aria-label="GitHub"><i class="fab fa-github"></i> </a>
+                <a href="https://www.linkedin.com/in/jacksangl/" class="text-3xl hover:text-blue-600 transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> </a>
+                <a href="mailto:sangljack06@gmail.com" class="text-3xl hover:text-red-400 transition-colors" aria-label="Email"><i class="fas fa-envelope"></i> </a>
+            </div>
+    <div class="body">
+        <div class="name"><b>About Me</b></div>
+        <div class = "text">
+            <p> My name is Jack Sangl. I am a Computer Engineering student at <a href="https://www.psu.edu/">Penn State
+                    University</a> and aspire to work in tech.
+                I am passionate about programming and problem-solving. In 2024 I graduated from <a
+                    href="https://www.fortleboeuf.net/">Fort LeBeouf High School</a> with academic honors.
+                My journey in technology began with self-driven projects inspired by Harvard’s CS50 course, where I
+                gained foundational programming experience in C. Since then I have began my education at Penn State Behrend where I am majoring in Computer Engineering.</p>
+            <p>I have no technincal professional experience but I previously worked at Wegmans Food Markets as a Meat
+                Customer Service Employee.
+                This role allowed me to develop and refine my communication skills, as I consistently engaged with a
+                diverse range of customers. I learned to adapt my approach to meet their unique needs, ensuring a
+                positive experience and building meaningful connections.
+                </p>
+            <p>Outside of academics, I am passionate about lifting weights, experimenting with new recipes in the
+                kitchen, and diving into health and nutrition discussions.
+                I believe that a healthy body fuels a productive mind, and I enjoy sharing this perspective with others.
+            </p>
+            <p> I’m deeply excited about the ever-evolving world of technology and the opportunities it presents to make
+                a meaningful impact. I’m eager to contribute to projects that push boundaries and improve lives through
+                innovation.
+                Feel free to explore my site to learn more about my work or <a style = "color: red" href="contact.html">connect</a> with me!
+            </p>
+
+
+        </div>
+    </div>
+    </div>
+    </main>
+</body>
+
+</html>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-zinc-950">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Portfolio website showcasing projects using a Swiper.js carousel styled with Tailwind CSS.">
+  <meta name="description"
+    content="Portfolio website showcasing projects using a Swiper.js carousel styled with Tailwind CSS.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects</title>
   <!-- Tailwind CSS CDN -->
@@ -10,7 +12,8 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css", crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" ,
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css">
 
   <!-- Head Template-->
@@ -23,28 +26,99 @@
       color: #fff;
     }
   </style>
+  <style>
+    .fullscreen-menu a {
+      transform: translateY(-100vh);
+    }
+
+    .fullscreen-menu:not(.opacity-0) a {
+      transform: translateY(0);
+      transition: transform 0.5s ease-out;
+    }
+
+    .fullscreen-menu:not(.opacity-0) a:nth-child(5) {
+      transition-delay: 0.0s;
+    }
+
+    .fullscreen-menu:not(.opacity-0) a:nth-child(4) {
+      transition-delay: 0.2s;
+    }
+
+    .fullscreen-menu:not(.opacity-0) a:nth-child(3) {
+      transition-delay: 0.4s;
+    }
+
+    .fullscreen-menu:not(.opacity-0) a:nth-child(2) {
+      transition-delay: 0.6s;
+    }
+
+    .fullscreen-menu:not(.opacity-0) a:nth-child(1) {
+      transition-delay: 0.8s;
+    }
+  </style>
 </head>
+
+<header class="header-placeholder">
+  <nav class="relative">
+    <button class="absolute top-4 right-4 z-50 text-white">
+      <svg class="menu-icon w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+      <svg class="close-icon w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <div
+      class="fullscreen-menu fixed inset-0 bg-black flex flex-col items-center justify-center gap-4 opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+      <a href="index.html" class="text-white text-3xl px-6 py-3 rounded-full hover:bg-white hover:text-black">Me</a>
+      <a href="projects.html"
+        class="text-white text-3xl px-6 py-3 rounded-full hover:bg-white hover:text-black">Projects</a>
+      <a href="blog.html" class="text-white text-3xl px-6 py-3 rounded-full hover:bg-white hover:text-black">Blog</a>
+      <a href="https://github.com/jacksangl/"
+        class="text-white text-3xl px-6 py-3 rounded-full hover:bg-white hover:text-black">GitHub</a>
+      <a href="contact.html"
+        class="text-white text-3xl px-6 py-3 rounded-full hover:bg-white hover:text-black">Contact</a>
+    </div>
+  </nav>
+  <script>
+    const button = document.querySelector('nav button');
+    const menuIcon = document.querySelector('.menu-icon');
+    const closeIcon = document.querySelector('.close-icon');
+    const fullscreenMenu = document.querySelector('.fullscreen-menu');
+    button.addEventListener('click', () => {
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+      fullscreenMenu.classList.toggle('opacity-0');
+      fullscreenMenu.classList.toggle('pointer-events-none');
+    });
+  </script>
+</header>
+
+
 <body class="text-white">
-  <!-- Header -->
-<header class="header-placeholder"></header>
 
   <!-- Main Content -->
   <main class="container mx-auto px-4 py-8">
     <section class="mb-12">
       <div class="text-center mb-6">
-        <h1 class="text-4xl font-extrabold">Projects</h1>
-        <p class="mt-2 text-zinc-400">Check out some of my work</p>
+        <h1 class="text-3xl font-bold mb-4" style="padding-bottom: 10px;">Projects</h1>
       </div>
       <!-- Swiper Showcase -->
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
-            <div class="bg-zinc-900 rounded-lg shadow-lg p-6">
-              <img src="https://via.placeholder.com/300" alt="Project 1" class="w-full rounded-md mb-4">
-              <h2 class="text-2xl font-bold mb-2">Project One</h2>
+            <div class="bg-zinc-900 rounded-lg shadow-lg p-6 max-w-sm mx-auto h-full">
+              <div class="h-48 overflow-hidden mb-4 rounded-md">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/NES-Console-Set.png" alt="Project 1"
+                  class="w-full h-full object-cover">
+              </div>
+              <h2 class="text-2xl font-bold mb-2">NES Emulator (In Progress)</h2>
               <p class="text-zinc-400 mb-4">
-                A brief description of Project One. It explains what the project does and the technologies used.
+                Completed the integration of the 6502 CPU. I used YouTube and tutorials to assist me, and help me break
+                into the interesting world of emulation.
               </p>
               <div class="flex space-x-4">
                 <a href="#" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition">Demo</a>
@@ -54,25 +128,35 @@
           </div>
           <!-- Slide 2 -->
           <div class="swiper-slide">
-            <div class="bg-zinc-900 rounded-lg shadow-lg p-6">
-              <img src="https://via.placeholder.com/300" alt="Project 2" class="w-full rounded-md mb-4">
-              <h2 class="text-2xl font-bold mb-2">Project Two</h2>
+            <div class="bg-zinc-900 rounded-lg shadow-lg p-6 max-w-sm mx-auto h-full">
+              <div class="h-48 overflow-hidden mb-4 rounded-md">
+                <img src="https://primeerierentals.com/pictures/logoupscale.jpg" alt="Project 1"
+                  class="w-full h-full object-cover">
+              </div>
+              <h2 class="text-2xl font-bold mb-2">Prime Erie Rentals</h2>
               <p class="text-zinc-400 mb-4">
-                A brief description of Project Two. It explains the key features and technologies used.
+                Created a fullstack web application using React, Node.js, and Supabase. This project allows users to
+                search for rental properties, view details, and contact the landlord.
               </p>
               <div class="flex space-x-4">
-                <a href="#" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition">Demo</a>
-                <a href="#" class="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600 transition">GitHub</a>
+                <a href="https://primeerierentals.com"
+                  class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition">Link</a>
+                <a href="https://github.com/jacksangl/primeErieRentals"
+                  class="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600 transition">GitHub</a>
               </div>
             </div>
           </div>
           <!-- Slide 3 -->
           <div class="swiper-slide">
-            <div class="bg-zinc-900 rounded-lg shadow-lg p-6">
-              <img src="https://via.placeholder.com/300" alt="Project 3" class="w-full rounded-md mb-4">
-              <h2 class="text-2xl font-bold mb-2">Project Three</h2>
+            <div class="bg-zinc-900 rounded-lg shadow-lg p-6 max-w-sm mx-auto h-full">
+              <div class="h-48 overflow-hidden mb-4 rounded-md">
+                <img src="https://primeerierentals.com/pictures/logoupscale.jpg" alt="Project 1"
+                  class="w-full h-full object-cover">
+              </div>
+              <h2 class="text-2xl font-bold mb-2">Calorify (In Progress)</h2>
               <p class="text-zinc-400 mb-4">
-                A brief description of Project Three. It covers the main functionality and design.
+                Calorify is a mobile nutrition and fitness tracking app built with React Native and Expo. The app allows
+                users to track their daily caloric intake and exercise.
               </p>
               <div class="flex space-x-4">
                 <a href="#" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition">Demo</a>
@@ -80,7 +164,11 @@
               </div>
             </div>
           </div>
+
+          <!-- Slide 4 -->
           <!-- Add more slides as needed -->
+
+
         </div>
         <!-- Pagination -->
         <div class="swiper-pagination mt-4"></div>
@@ -123,4 +211,5 @@
     });
   </script>
 </body>
+
 </html>

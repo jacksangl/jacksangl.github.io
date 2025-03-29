@@ -2,3 +2,39 @@
     color: #3b82f6; /* Tailwind's blue-500 */
     transition: color 0.2s ease-in-out;
 }
+
+
+/*These styles effect the project scrolling*/
+/* Ensure the container takes full width */
+.projects {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Style for project cards */
+  .project-card {
+    width: 300px; /* Large card width */
+    height: 400px; /* Large card height */
+    transition: transform 0.3s ease; /* Smooth hover transition */
+  }
+  
+  /* Hover effect: scale up the card */
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Optional: Adjust Swiper container */
+  .swiper-container {
+    width: 100%;
+  }
+  
+  /* Ensure slides are in one row */
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-link:active {
+    background-color: white;
+    color: black;
+  }
