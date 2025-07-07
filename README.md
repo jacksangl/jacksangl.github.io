@@ -1,2 +1,2 @@
 # jacksangl.github.io
-## This is a hub for Jack Sangl's projects and blog. 
+## This is a hub for Jack Sangl's projects. 
